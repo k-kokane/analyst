@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { ResearchRun, StockAnalysis } from '../types'
+import ThemeToggle from '../ThemeToggle'
 
 interface Props {
   id: string
@@ -134,6 +135,7 @@ export default function Research({ id }: Props) {
         <a href="#/" className="brand">
           ▲ Analyst
         </a>
+        <ThemeToggle />
       </nav>
 
       <main className="container" style={{ maxWidth: '820px', paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-16)' }}>
