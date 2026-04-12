@@ -1,0 +1,108 @@
+{
+  "id": "2026-04-11",
+  "date": "2026-04-11",
+  "tags": ["momentum", "breakout"],
+  "summary": "Defence, IT and pharma leading broad-based momentum rally on Nifty recovery above 23,500.",
+  "market_context": "Nifty 50 has recovered ~3% in April after the RBI rate cut and easing West Asia tensions. Nifty Midcap 100 is up 7% MTD and outperforming large caps. FII net selling is moderating; domestic-catalyst stocks in defence, IT and pharma are seeing volume-backed breakouts into new technical territory.",
+  "stocks": [
+    {
+      "ticker": "MTARTECH",
+      "name": "MTAR Technologies Ltd",
+      "exchange": "NSE",
+      "sector": "Defence & Aerospace",
+      "cmp": 4234.35,
+      "target": 4400.00,
+      "upside": 3.9,
+      "timeframe": "2 weeks",
+      "thesis": "Fresh all-time high breakout on a ₹2,395 cr order book and Indian Army's drone roadmap driving defence-sector re-rating.",
+      "technical": {
+        "pattern": "All-Time High Breakout (Higher Highs & Higher Lows)",
+        "rsi": 66,
+        "trend": "Bullish across daily, weekly, monthly",
+        "volume_signal": "2.3x average on breakout candle",
+        "support": 3900.00,
+        "resistance": 3923.45,
+        "points": [
+          "Cleared previous 52-week high ₹3,923 by 6.9% — no overhead resistance",
+          "Down-sloping trendline breakout confirmed on closing basis with huge volume",
+          "MACD, OBV and Bollinger Bands all bullish across all timeframes"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "₹2,395 cr order book; Indian Army released 80-variant drone/UAS roadmap in April 2026",
+        "points": [
+          "Revenue up 136% in 6 months on order inflows from ISRO and defence PSUs",
+          "Indigenisation mandate gives long-term revenue visibility",
+          "Institutional accumulation; FII + DII combined holding increasing"
+        ]
+      },
+      "risk": "Profit-booking at ATH likely; hold only above ₹3,900. Any order deferral is a sentiment risk."
+    },
+    {
+      "ticker": "LTIM",
+      "name": "LTIMindtree Ltd",
+      "exchange": "NSE",
+      "sector": "IT Services",
+      "cmp": 4443.30,
+      "target": 4650.00,
+      "upside": 4.7,
+      "timeframe": "2 weeks",
+      "thesis": "Decisive break above multi-month ₹4,380 resistance with rising volumes ahead of Q4 deal-win announcements.",
+      "technical": {
+        "pattern": "Multi-Month Resistance Breakout",
+        "rsi": 58,
+        "trend": "Bullish — reclaimed 20-DMA, pushing toward 50-DMA",
+        "volume_signal": "1.8x average on breakout day",
+        "support": 4250.00,
+        "resistance": 4380.00,
+        "points": [
+          "Surpassed the ₹4,380 multiple-resistance zone decisively on closing basis",
+          "RSI crossed above 50 mark from a trough — momentum inflecting upward",
+          "Daily Bollinger Band buy signal triggered; stock above 20-DMA ₹4,245"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "Q4 FY26 deal-win pipeline expected strong; USD/INR tailwind with rupee near ₹84",
+        "points": [
+          "Analyst consensus target ₹5,908 — stock trading at steep discount to fair value",
+          "IT sector recovery driven by BFSI and manufacturing verticals",
+          "Cost optimisation driving margin expansion; expected 150bps QoQ improvement"
+        ]
+      },
+      "risk": "Weak Q4 revenue guidance (Apr 28 results) could reverse the move. Key support ₹4,250 must hold."
+    },
+    {
+      "ticker": "NATCOPHARM",
+      "name": "Natco Pharma Ltd",
+      "exchange": "NSE",
+      "sector": "Pharmaceuticals",
+      "cmp": 1065.00,
+      "target": 1110.00,
+      "upside": 4.2,
+      "timeframe": "2 weeks",
+      "thesis": "13-month resistance cleared with 6x volume on first-in-India Semaglutide launch — a strong price-catalyst combination.",
+      "technical": {
+        "pattern": "13-Month Horizontal Resistance Breakout",
+        "rsi": 62,
+        "trend": "Bullish — stock back above all short-term MAs",
+        "volume_signal": "6x average on breakout day — extraordinary participation",
+        "support": 1010.00,
+        "resistance": 1059.00,
+        "points": [
+          "Cleared ₹1,040–₹1,059 resistance band (13 months of consolidation) on 6x volume",
+          "RSI at 62 — in breakout territory with room to run before overbought",
+          "Nifty Pharma index is YTD flat (-0.1%) vs Nifty -10.8% — sector is a defensive outperformer"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "First Indian company to launch Semaglutide injection in multi-dose vials — priced 70% below pen devices and 90% below the originator brand",
+        "points": [
+          "Massive addressable market: diabetes + obesity GLP-1 segment fastest growing in Indian pharma",
+          "Business split (demerger) under way — unlocks value for specialty vs generics division",
+          "Consistent PAT growth for 6 consecutive quarters; Q4 FY26 results due late April"
+        ]
+      },
+      "risk": "Regulatory pricing intervention on Semaglutide possible. Key support ₹1,010 — breach signals failed breakout."
+    }
+  ]
+}

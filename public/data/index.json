@@ -1,0 +1,11 @@
+{
+  "runs": [
+    {
+      "id": "2026-04-11",
+      "date": "2026-04-11",
+      "tags": ["momentum", "breakout"],
+      "stocks": ["MTARTECH", "LTIM", "NATCOPHARM"],
+      "summary": "Defence, IT and pharma leading broad-based momentum rally on Nifty recovery above 23,500."
+    }
+  ]
+}
