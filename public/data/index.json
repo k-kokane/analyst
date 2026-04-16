@@ -1,6 +1,13 @@
 {
   "runs": [
     {
+      "id": "2026-04-16",
+      "date": "2026-04-16",
+      "tags": ["momentum", "breakout"],
+      "stocks": ["LAURUSLABS", "CUMMINSIND", "BAJAJ-AUTO"],
+      "summary": "Capital Goods, Pharma, and Automobiles showing volume-backed technical breakouts as Nifty stabilises above 23,800 on easing macro headwinds."
+    },
+    {
       "id": "2026-04-11",
       "date": "2026-04-11",
       "tags": ["momentum", "breakout"],
