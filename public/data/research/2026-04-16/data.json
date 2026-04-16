@@ -1,0 +1,108 @@
+{
+  "id": "2026-04-16",
+  "date": "2026-04-16",
+  "tags": ["momentum", "breakout"],
+  "summary": "Capital Goods, Pharma, and Automobiles showing volume-backed technical breakouts as Nifty stabilises above 23,800 on easing macro headwinds.",
+  "market_context": "Nifty 50 has rebounded from April lows toward the 24,000 zone, supported by the RBI's 25bps rate cut and easing West Asia tensions. Nifty Midcap 100 surged 2.31% on April 15 and is up ~7% MTD, with Capital Goods, Pharma, and select Auto stocks leading the RRG rotation into the 'Improving' quadrant. FII net selling has moderated relative to March 2026, creating an environment where volume-confirmed breakouts in quality midcaps are offering high-probability 2-week momentum trades.",
+  "stocks": [
+    {
+      "ticker": "LAURUSLABS",
+      "name": "Laurus Labs Ltd",
+      "exchange": "NSE",
+      "sector": "Pharmaceuticals",
+      "cmp": 1082.00,
+      "target": 1128.00,
+      "upside": 4.2,
+      "timeframe": "2 weeks",
+      "thesis": "Decisive symmetrical triangle breakout above ₹1,075 on volume expansion — riding India's 12.4% YoY pharma market growth into April 30 Q4 results.",
+      "technical": {
+        "pattern": "Symmetrical Triangle Breakout",
+        "rsi": 60,
+        "trend": "Bullish — reclaimed 50-DMA, trending above short-term MAs",
+        "volume_signal": "1.8x average on breakout candle",
+        "support": 1035.00,
+        "resistance": 1075.00,
+        "points": [
+          "Broke above symmetrical triangle at ₹1,075 on above-average volume",
+          "RSI at 60 rising from neutral — momentum inflecting, room before overbought",
+          "Bollinger Band width expanding confirms volatility breakout underway"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "India pharma IPM grew 12.4% YoY in Feb 2026 (third consecutive double-digit month); Q4 FY26 results due April 30",
+        "points": [
+          "Domestic pharma IPM expanding 12%+ YoY for three straight months",
+          "CDMO segment gaining traction; multi-year API capacity expansion on track",
+          "Analyst consensus positive ahead of Q4 FY26 earnings on April 30"
+        ]
+      },
+      "risk": "Q4 FY26 miss on April 30 could reverse move sharply. Key support ₹1,040 — breach signals failed breakout."
+    },
+    {
+      "ticker": "CUMMINSIND",
+      "name": "Cummins India Ltd",
+      "exchange": "NSE",
+      "sector": "Capital Goods",
+      "cmp": 4907.00,
+      "target": 5110.00,
+      "upside": 4.1,
+      "timeframe": "2 weeks",
+      "thesis": "Broke out of a short-term falling channel at ₹4,720 with a strong bullish candle, then retested and held above ₹4,550 — confirming supply absorption ahead of India's power-infra capex cycle.",
+      "technical": {
+        "pattern": "Falling Channel Breakout with Successful Retest",
+        "rsi": 63,
+        "trend": "Bullish — RSI holding above 60 on both daily and weekly charts",
+        "volume_signal": "1.9x average on breakout candle",
+        "support": 4620.00,
+        "resistance": 4720.00,
+        "points": [
+          "Broke short-term falling channel at ₹4,720 on a strong bullish candle",
+          "Successful retest above ₹4,550 — prior breakout zone now acting as support",
+          "RSI sustaining above 60 on daily and weekly — institutional buying confirmed"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "India's power-sector and data-centre capex boom driving diesel genset and backup-power demand; ROE 24.5%, ROCE 30.2%, debt-free balance sheet",
+        "points": [
+          "Power sector capex and data-centre construction driving genset order inflows",
+          "Debt-free; ROE 24.5% and ROCE 30.2% — premium valuation well supported",
+          "FY26 annual results due May 27 — strong execution expected"
+        ]
+      },
+      "risk": "Break below ₹4,620 (retest support) invalidates breakout; any capex-slowdown commentary at May 27 results is a tail risk."
+    },
+    {
+      "ticker": "BAJAJ-AUTO",
+      "name": "Bajaj Auto Ltd",
+      "exchange": "NSE",
+      "sector": "Automobiles",
+      "cmp": 8620.00,
+      "target": 9000.00,
+      "upside": 4.4,
+      "timeframe": "2 weeks",
+      "thesis": "Ascending triangle at ₹8,800 resistance breaking with sustained volume as Mar'26 wholesale volumes sealed a strong FY26 close and Q4 earnings approach.",
+      "technical": {
+        "pattern": "Ascending Triangle Breakout",
+        "rsi": 60,
+        "trend": "Bullish — reclaimed 20-DMA; MACD bullish crossover on daily",
+        "volume_signal": "1.7x average on breakout candle",
+        "support": 8200.00,
+        "resistance": 8800.00,
+        "points": [
+          "Breaking above ₹8,800 horizontal resistance after series of higher lows",
+          "RSI at 60 — entering momentum zone above 50-DMA with positive slope",
+          "MACD bullish crossover on daily chart; signal line turning upward"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "FY26 closed with sustained momentum in Mar'26 wholesale volumes; Axis Direct named Bajaj Auto a top Buy in Q3FY26 update with 14%+ upside",
+        "points": [
+          "Mar'26 wholesale volumes showed sustained momentum across all segments",
+          "Export recovery underway in Africa and LATAM — key growth driver for FY27",
+          "Chetak EV gaining market share; Pulsar EV lineup expanding in FY27"
+        ]
+      },
+      "risk": "Weak Q4 FY26 export data or guidance miss in late-April results. Below ₹8,200 signals failed ascending triangle — exit."
+    }
+  ]
+}
