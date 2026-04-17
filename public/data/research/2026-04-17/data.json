@@ -1,0 +1,108 @@
+{
+  "id": "2026-04-17",
+  "date": "2026-04-17",
+  "tags": ["momentum", "breakout"],
+  "summary": "Financial Services, Defence, and Real Estate showing momentum leadership as Nifty consolidates near 24,200 post a 9% April recovery on RBI cut and geopolitical easing.",
+  "market_context": "Nifty 50 closed at 24,196 on April 16 — consolidating after back-to-back rallies of 1.6% (April 15) and the macro-driven 9% April surge on RBI's 25bps rate cut and the West Asia ceasefire. Profit booking dominated Auto, FMCG, and Energy on April 16, while IT, Realty, and select Defence stocks showed clear relative strength. FII net selling is at multi-month lows, and volume-backed breakouts in individual names are outpacing the index by a wide margin.",
+  "stocks": [
+    {
+      "ticker": "MCX",
+      "name": "Multi Commodity Exchange of India Ltd",
+      "exchange": "NSE",
+      "sector": "Financial Services",
+      "cmp": 2870.00,
+      "target": 2985.00,
+      "upside": 4.0,
+      "timeframe": "2 weeks",
+      "thesis": "Hit a fresh all-time high of ₹2,889 on April 16 — breaking simultaneously out of a 3-month and 30-month parallel channel — driven by record FY26 commodity volumes and a 121% revenue surge.",
+      "technical": {
+        "pattern": "All-Time High Breakout (Multi-Timeframe Channel Breakout)",
+        "rsi": 65,
+        "trend": "Bullish — trading above all MAs: 5, 20, 50, 100, and 200-day",
+        "volume_signal": "2.0x average on ATH breakout candle (April 16)",
+        "support": 2706.00,
+        "resistance": 2889.00,
+        "points": [
+          "Cleared previous 52-week high of ₹2,706 — no historical overhead supply",
+          "3-month and 30-month parallel channel breakout confirmed simultaneously",
+          "RSI at 65 — elevated momentum but not overbought; room to run"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "Q3 FY26: Revenue +121% YoY to ₹666 cr, PAT +151% YoY to ₹401 cr; ADTV ₹7.5 lakh crore (+220% YoY); brokerage hiked target by 25%",
+        "points": [
+          "Average daily turnover surged 220% YoY to ₹7.5 lakh crore in Q3 FY26",
+          "Active client base grew 62% YoY on elevated commodity market volatility",
+          "HDFC Securities maintains Buy; multiple brokerages raised targets post Q3 beat"
+        ]
+      },
+      "risk": "Weekly MACD mildly bearish signals near-term caution. If profit-booking pulls MCX below ₹2,706 (prior 52-week high), momentum structure weakens significantly."
+    },
+    {
+      "ticker": "HAL",
+      "name": "Hindustan Aeronautics Ltd",
+      "exchange": "NSE",
+      "sector": "Defence & Aerospace",
+      "cmp": 4363.00,
+      "target": 4535.00,
+      "upside": 3.9,
+      "timeframe": "2 weeks",
+      "thesis": "Up 9.62% in a single week, with RSI generating a short-term BUY signal — riding India's ₹6.81 lakh crore defence budget and JM Financial's ₹4,875 Buy target.",
+      "technical": {
+        "pattern": "Recovery Bull Flag (Multi-Week Resistance Breakout)",
+        "rsi": 63,
+        "trend": "Bullish short-term — above 5, 20, 50, and 100-day MAs; testing 200-DMA",
+        "volume_signal": "1.8x average — 'Robust Trading Activity' flagged April 16",
+        "support": 4100.00,
+        "resistance": 4400.00,
+        "points": [
+          "RSI generating confirmed short-term BUY signal; buying momentum building",
+          "Stock gained 9.62% in past week — reclaimed all short-to-mid term MAs",
+          "MACD sell signal weakening — line curling upward toward bullish cross"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "India's FY27 defence budget ₹6.81 lakh crore (+9.5%); JM Financial initiates Buy with ₹4,875 target; indigenisation mandate drives HAL order wins",
+        "points": [
+          "Defence capital expenditure ₹1.80 lakh crore earmarked for procurement and modernisation",
+          "Govt indigenisation mandate gives long revenue visibility to HAL as sole fighter aircraft maker",
+          "Rating upgraded from Sell to Hold on April 9 — sentiment turnaround underway"
+        ]
+      },
+      "risk": "200-DMA at ~₹4,600 acts as stiff overhead resistance and could cap near-term gains. Break below ₹4,100 (recovery support) signals failed breakout."
+    },
+    {
+      "ticker": "PRESTIGE",
+      "name": "Prestige Estates Projects Ltd",
+      "exchange": "NSE",
+      "sector": "Real Estate",
+      "cmp": 1326.60,
+      "target": 1380.00,
+      "upside": 4.0,
+      "timeframe": "2 weeks",
+      "thesis": "Surged 3.46% on April 15 from a key support zone on RSI > 60 and MACD bullish crossover, directly catalysed by record FY26 bookings of ₹30,024 crore.",
+      "technical": {
+        "pattern": "Support Zone Reversal with Bullish Engulfing Candle",
+        "rsi": 62,
+        "trend": "Bullish reversal — RSI above 60, MACD crossover confirmed",
+        "volume_signal": "1.6x average on April 15 reversal candle",
+        "support": 1220.00,
+        "resistance": 1380.00,
+        "points": [
+          "Emerged from key support zone with strong bullish engulfing candle",
+          "RSI above 60 confirming momentum in favour of bulls",
+          "MACD bullish crossover + Bollinger Band squeeze signals upcoming directional move"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "FY26 booking value hit record ₹30,024 crore — 5% above its own guidance; promoters raised stake in Q4",
+        "points": [
+          "Record FY26 bookings ₹30,024 crore — highest in company history",
+          "Prestige collections ₹20,000+ crore in FY26 — strong cash flow visibility",
+          "Promoter stake increase in Q4 signals insider confidence in recovery"
+        ]
+      },
+      "risk": "Nifty Realty index fell 24% in 2026 — sector headwinds remain strong. Technical Sell rating from MarketsMojo. Below ₹1,220 (support zone) signals failed reversal — exit."
+    }
+  ]
+}
