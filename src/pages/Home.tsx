@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { IndexData, ResearchRunMeta } from '../types'
+import ThemeToggle from '../ThemeToggle'
 
 function formatDate(d: string) {
   return new Date(d).toLocaleDateString('en-IN', {
@@ -32,6 +33,7 @@ export default function Home() {
         <span className="text-light" style={{ fontSize: 'var(--text-8)' }}>
           Indian Market · Momentum Breakouts
         </span>
+        <ThemeToggle />
       </nav>
 
       <main className="container" style={{ maxWidth: '820px', paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-16)' }}>
