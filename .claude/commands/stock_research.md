@@ -96,12 +96,12 @@ to fetch live fundamental data for each shortlisted ticker from Screener.in.
 
 Proxy URL format:
 ```
-{PROXY_URL}/api/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/{TICKER}/consolidated/
+{PROXY_URL}/.netlify/functions/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/{TICKER}/consolidated/
 ```
 
 Example for MCX:
 ```
-{PROXY_URL}/api/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/MCX/consolidated/
+{PROXY_URL}/.netlify/functions/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/MCX/consolidated/
 ```
 
 From the Screener.in HTML response, extract and record:

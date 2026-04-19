@@ -10,30 +10,33 @@ const ALLOWED_HOSTS = [
   'dhan.co',
 ];
 
-export default async function handler(req, res) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+export const handler = async (event) => {
+  if (event.httpMethod !== 'GET') {
+    return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
 
-  const { url, secret } = req.query;
+  const { url, secret } = event.queryStringParameters || {};
 
   if (!process.env.PROXY_SECRET || secret !== process.env.PROXY_SECRET) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    return { statusCode: 401, body: JSON.stringify({ error: 'Unauthorized' }) };
   }
 
   if (!url) {
-    return res.status(400).json({ error: 'url query parameter required' });
+    return { statusCode: 400, body: JSON.stringify({ error: 'url query parameter required' }) };
   }
 
   let parsedUrl;
   try {
     parsedUrl = new URL(url);
   } catch {
-    return res.status(400).json({ error: 'Invalid URL' });
+    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid URL' }) };
   }
 
   if (!ALLOWED_HOSTS.includes(parsedUrl.hostname)) {
-    return res.status(403).json({ error: `Host not allowed: ${parsedUrl.hostname}` });
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ error: `Host not allowed: ${parsedUrl.hostname}` }),
+    };
   }
 
   try {
@@ -61,12 +64,21 @@ export default async function handler(req, res) {
     const contentType = response.headers.get('content-type') || 'text/html';
     const body = await response.text();
 
-    res.setHeader('X-Proxy-Status', response.status.toString());
-    res.setHeader('X-Proxy-Content-Type', contentType);
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.status(200).send(body);
+    return {
+      statusCode: 200,
+      headers: {
+        'X-Proxy-Status': response.status.toString(),
+        'X-Proxy-Content-Type': contentType,
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': contentType,
+      },
+      body,
+    };
   } catch (err) {
-    res.setHeader('X-Proxy-Status', 'error');
-    res.status(200).json({ error: err.message });
+    return {
+      statusCode: 200,
+      headers: { 'X-Proxy-Status': 'error', 'Access-Control-Allow-Origin': '*' },
+      body: JSON.stringify({ error: err.message }),
+    };
   }
-}
+};
