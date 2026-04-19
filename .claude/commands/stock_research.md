@@ -89,6 +89,32 @@ From the fetched page, extract and record:
 
 ---
 
+## Step 1.65 — Verify Fundamentals via Screener.in (via Proxy)
+
+If the environment variable `PROXY_URL` and `PROXY_SECRET` are set, use the deployed Vercel proxy
+to fetch live fundamental data for each shortlisted ticker from Screener.in.
+
+Proxy URL format:
+```
+{PROXY_URL}/api/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/{TICKER}/consolidated/
+```
+
+Example for MCX:
+```
+{PROXY_URL}/api/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/MCX/consolidated/
+```
+
+From the Screener.in HTML response, extract and record:
+- **Sales growth (TTM)** — look for revenue/sales growth YoY
+- **Profit growth (TTM)** — PAT growth YoY
+- **ROE** — return on equity
+- **Debt to equity** — balance sheet quality indicator
+- **Promoter holding change** — any recent increase/decrease
+
+If the proxy fetch returns an error or non-200 `X-Proxy-Status`, skip this step and note "Screener data unavailable".
+
+---
+
 ## Step 1.7 — Final Selection
 
 From your verified shortlist, select exactly **3 stocks from 3 different sectors** that meet ALL of:
@@ -207,3 +233,4 @@ git push -u origin claude/run-analysis-skill-OurSR
 - [ ] Catalyst is specific and recent (≤3 days old)
 - [ ] Risk mentions a specific price level or event
 - [ ] JSON is valid (no trailing commas, correct types)
+- [ ] Screener.in fundamentals verified via proxy (or noted as unavailable if proxy not configured)
