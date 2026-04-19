@@ -4,24 +4,125 @@ You are a professional Indian stock market analyst specialising in momentum and 
 
 ---
 
-## Step 1 — Research
+## Step 1 — Research (last 3 days only)
 
-Use WebSearch to find current momentum breakout candidates. Run several targeted queries such as:
-- "NSE stocks momentum breakout [today's date / current month year]"
-- "Indian stocks 52-week high breakout today"
-- "Nifty midcap smallcap momentum stocks [current week]"
-- "BSE NSE technical breakout volume surge [current month]"
-- Sector-specific: "IT sector breakout", "pharma stocks breakout", "auto sector momentum", etc.
+Use WebSearch to find current momentum breakout candidates. Every query MUST include a recency filter:
+append `after:YYYY-MM-DD` where YYYY-MM-DD is today's date minus 3 days.
 
-For each candidate, verify ALL of the following before selecting it:
-1. **Technical breakout** — breaking above a clear resistance level, previous high, or pattern neckline
-2. **Volume confirmation** — breakout on 1.5×–3× average volume
-3. **RSI** — healthy range 52–72 (not overbought, not oversold)
-4. **Chart pattern** — name it specifically: Cup & Handle, Ascending Triangle, Bull Flag, Inverse H&S, etc.
-5. **Fundamental catalyst** — something concrete: earnings beat, new order win, capacity expansion, FII/DII buying, sector policy tailwind
-6. **Realistic upside** — 2–5% in 2 weeks based on nearest resistance / measured move
+Example queries (substitute real dates):
+- `"NSE stocks momentum breakout" after:2026-04-14`
+- `"Indian stocks 52-week high breakout today" after:2026-04-14`
+- `"Nifty midcap smallcap breakout stocks" after:2026-04-14`
+- `"BSE NSE technical breakout volume surge" after:2026-04-14`
+- `"IT sector breakout NSE" after:2026-04-14`
+- `"pharma stocks breakout NSE" after:2026-04-14`
+- `"auto sector momentum breakout NSE" after:2026-04-14`
 
-**Select exactly 3 stocks from 3 different sectors.**
+**IGNORE any search result whose article date is older than 3 days.**
+Use results only to identify ticker symbols and fundamental catalysts — never copy prices or technical indicator values from articles.
+
+For each candidate, shortlist based on:
+1. **Fundamental catalyst** — something concrete and recent: earnings beat, new order win, capacity expansion, FII/DII buying, sector policy tailwind
+2. **Named chart pattern** — must be specific: Cup & Handle, Ascending Triangle, Bull Flag, Inverse H&S, etc.
+3. **Believable upside** — 2–5% to nearest resistance / measured move
+
+**Shortlist 5–6 candidates from at least 4 different sectors before moving to Step 1.5.**
+
+---
+
+## Step 1.5 — Verify Current Market Price for Each Candidate
+
+For **every** shortlisted ticker, fetch the live price from Yahoo Finance's JSON API.
+URL format: `https://query1.finance.yahoo.com/v8/finance/chart/{TICKER}.NS?interval=1d&range=5d`
+
+Example for Bajaj Auto:
+```
+https://query1.finance.yahoo.com/v8/finance/chart/BAJAJ-AUTO.NS?interval=1d&range=5d
+```
+
+From the JSON response, extract:
+- `chart.result[0].meta.regularMarketPrice` → use as **CMP**
+- `chart.result[0].meta.previousClose` → previous close for reference
+
+**Rules:**
+- NEVER use a price from a news article as the CMP
+- If the Yahoo Finance fetch fails for a ticker, try `https://query2.finance.yahoo.com/v8/finance/chart/{TICKER}.NS?interval=1d&range=5d`
+- If both fail, drop the ticker and use the next candidate from your shortlist
+- Record the verified CMP for each ticker before proceeding
+
+---
+
+## Step 1.6 — Verify Current Technical Indicators for Each Candidate
+
+For **every** shortlisted ticker, fetch live technical indicator data from one of these sources
+(try in order until one succeeds):
+
+**Option A — Investing.com India:**
+```
+https://in.investing.com/equities/{company-slug}-technical
+```
+Example: `https://in.investing.com/equities/bajaj-auto-ltd-technical`
+
+Extract: RSI (14), MACD signal, trend summary (bullish/bearish), moving average positions.
+
+**Option B — Dhan technical analysis page:**
+```
+https://dhan.co/stocks/{company-slug}-ltd-technical-analysis/
+```
+Example: `https://dhan.co/stocks/bajaj-auto-ltd-technical-analysis/`
+
+**Option C — Trendlyne technical analysis:**
+```
+https://trendlyne.com/equity/technical-analysis/{TICKER}/
+```
+
+From the fetched page, extract and record:
+- **RSI (14-day)** — must be 52–72 to qualify; discard candidates outside this range
+- **MACD** — signal line position (above/below)
+- **Trend** — current trend direction from moving averages
+- **Volume** — recent volume vs average (look for ≥1.5× on the breakout candle)
+
+**Rules:**
+- NEVER use RSI, MACD, or volume figures from news articles
+- If technical data cannot be fetched for a ticker, note "unverified" and prefer a ticker where data was confirmed
+- Discard any candidate whose live RSI is below 50 or above 74
+
+---
+
+## Step 1.65 — Verify Fundamentals via Screener.in (via Proxy)
+
+If the environment variable `PROXY_URL` and `PROXY_SECRET` are set, use the deployed Vercel proxy
+to fetch live fundamental data for each shortlisted ticker from Screener.in.
+
+Proxy URL format:
+```
+{PROXY_URL}/.netlify/functions/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/{TICKER}/consolidated/
+```
+
+Example for MCX:
+```
+{PROXY_URL}/.netlify/functions/fetch?secret={PROXY_SECRET}&url=https://www.screener.in/company/MCX/consolidated/
+```
+
+From the Screener.in HTML response, extract and record:
+- **Sales growth (TTM)** — look for revenue/sales growth YoY
+- **Profit growth (TTM)** — PAT growth YoY
+- **ROE** — return on equity
+- **Debt to equity** — balance sheet quality indicator
+- **Promoter holding change** — any recent increase/decrease
+
+If the proxy fetch returns an error or non-200 `X-Proxy-Status`, skip this step and note "Screener data unavailable".
+
+---
+
+## Step 1.7 — Final Selection
+
+From your verified shortlist, select exactly **3 stocks from 3 different sectors** that meet ALL of:
+- Live CMP confirmed via Yahoo Finance (Step 1.5)
+- RSI 52–72 confirmed via technical page (Step 1.6)
+- Named chart pattern from a ≤3-day-old article
+- Specific fundamental catalyst from a ≤3-day-old article
+- Computed upside (target − verified CMP) / verified CMP × 100 is between 2.0% and 5.0%
 
 ---
 
@@ -81,7 +182,9 @@ Create `public/data/research/<run-id>/data.json` with this exact schema:
 ```
 
 Rules for the data:
-- CMP should reflect approximate current market price (use search results)
+- **`cmp` MUST be the verified live price from Step 1.5** — never from a news article
+- **`rsi` MUST be the verified value from Step 1.6** — never from a news article
+- **`upside` MUST be recomputed as** `round((target - cmp) / cmp * 100, 1)` using the verified CMP
 - Upside must be between 2.0 and 5.0
 - Pattern name must be specific — not "bullish" or "uptrend"
 - Catalyst must be specific — not "strong fundamentals"
@@ -113,7 +216,7 @@ Save the updated file.
 ```bash
 git add public/data/
 git commit -m "research: stock_research run <run-id>"
-git push -u origin claude/stock-market-analyst-IJbM6
+git push -u origin claude/run-analysis-skill-OurSR
 ```
 
 ---
@@ -121,10 +224,13 @@ git push -u origin claude/stock-market-analyst-IJbM6
 ## Quality checklist before committing
 
 - [ ] All 3 tickers are real, actively traded NSE/BSE stocks
-- [ ] Prices are plausible (cross-check with search results)
+- [ ] CMP for each ticker fetched live from Yahoo Finance (Step 1.5) — not from an article
+- [ ] RSI for each ticker fetched live from a technical page (Step 1.6) — not from an article
+- [ ] Upside recomputed from verified CMP — between 2.0% and 5.0%
+- [ ] All search results used are ≤3 days old
 - [ ] 3 different sectors
 - [ ] Technical pattern is named precisely
-- [ ] Catalyst is specific (company or sector event)
-- [ ] Upside is 2–5%
+- [ ] Catalyst is specific and recent (≤3 days old)
 - [ ] Risk mentions a specific price level or event
 - [ ] JSON is valid (no trailing commas, correct types)
+- [ ] Screener.in fundamentals verified via proxy (or noted as unavailable if proxy not configured)

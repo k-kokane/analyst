@@ -1,6 +1,13 @@
 {
   "runs": [
     {
+      "id": "2026-04-17",
+      "date": "2026-04-17",
+      "tags": ["momentum", "breakout"],
+      "stocks": ["MCX", "HAL", "PRESTIGE"],
+      "summary": "Financial Services, Defence, and Real Estate showing momentum leadership as Nifty consolidates near 24,200 post a 9% April recovery on RBI cut and geopolitical easing."
+    },
+    {
       "id": "2026-04-16",
       "date": "2026-04-16",
       "tags": ["momentum", "breakout"],
