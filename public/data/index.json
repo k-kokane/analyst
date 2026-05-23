@@ -1,6 +1,13 @@
 {
   "runs": [
     {
+      "id": "2026-05-23",
+      "date": "2026-05-23",
+      "tags": ["momentum", "breakout"],
+      "stocks": ["MAZDOCK", "DRREDDY", "LT"],
+      "summary": "Defence, Pharma, and Capital Goods lead breakouts as Nifty consolidates near 23,650 — BrahMos Vietnam deal, rupee tailwind for exporters, and infra capex push converge on three sector-leading momentum setups."
+    },
+    {
       "id": "2026-04-17",
       "date": "2026-04-17",
       "tags": ["momentum", "breakout"],

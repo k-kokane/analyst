@@ -1,0 +1,108 @@
+{
+  "id": "2026-05-23",
+  "date": "2026-05-23",
+  "tags": ["momentum", "breakout"],
+  "summary": "Defence, Pharma, and Capital Goods lead breakouts as Nifty consolidates near 23,650 — BrahMos Vietnam deal, rupee tailwind for exporters, and infra capex push converge on three sector-leading momentum setups.",
+  "market_context": "Nifty 50 closed at 23,659 on May 22 — recovering through the week with sector rotation favouring defence (BrahMos Vietnam ~₹6,000 cr deal), pharma (Nifty Pharma at fresh record on rupee weakness and defensive flows) and capital goods (₹11.21 lakh crore Budget infra capex). FII selling has moderated while SIP inflows of ₹321 bn/month continue supporting mid/smallcap leadership. IT also rebounded 3-4% off long-term trendline support, broadening market breadth. Volume-backed individual breakouts are outperforming the index — a textbook environment for tactical 2-week momentum trades.",
+  "stocks": [
+    {
+      "ticker": "MAZDOCK",
+      "name": "Mazagon Dock Shipbuilders Ltd",
+      "exchange": "NSE",
+      "sector": "Defence & Shipbuilding",
+      "cmp": 2703.90,
+      "target": 2800.00,
+      "upside": 3.6,
+      "timeframe": "2 weeks",
+      "thesis": "Breaking out of a 3-week consolidation on the BrahMos Vietnam ~₹6,000 crore deal news, with 10% move from ₹2,451 to ₹2,704 in five sessions and weekly MACD turning mildly bullish.",
+      "technical": {
+        "pattern": "Bollinger Band Squeeze Breakout from Consolidation",
+        "rsi": 61,
+        "trend": "Bullish — weekly Bollinger Bands mildly bullish, daily MACD curling up",
+        "volume_signal": "1.8x average on the breakout candle post Vietnam deal news",
+        "support": 2450.00,
+        "resistance": 2800.00,
+        "points": [
+          "Cleared multi-week resistance at ₹2,650 on Vietnam deal news",
+          "RSI at 61 — momentum building without overbought conditions",
+          "Weekly Bollinger squeeze resolution favours upside continuation"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "BrahMos missile deal with Vietnam (~₹6,000 cr) in focus; Defence Minister's outreach to Vietnam and South Korea driving fresh export visibility",
+        "points": [
+          "Sole Indian builder of submarines, frigates and destroyers — strong order pipeline",
+          "Defence shipbuilding sector growing 12-18% annually with indigenisation mandate",
+          "FY27 defence budget ₹6.81 lakh crore (+9.5% YoY) supports execution runway"
+        ]
+      },
+      "risk": "If price closes back below ₹2,450 (recent breakout base), the momentum setup invalidates. ICICI Direct's longer-term target ₹3,060 implies multi-week consolidation if profit-booking kicks in near ₹2,800."
+    },
+    {
+      "ticker": "DRREDDY",
+      "name": "Dr Reddy's Laboratories Ltd",
+      "exchange": "NSE",
+      "sector": "Pharmaceuticals",
+      "cmp": 1322.00,
+      "target": 1375.00,
+      "upside": 4.0,
+      "timeframe": "2 weeks",
+      "thesis": "Symmetrical triangle compressing against the 2023 descending trendline at ₹1,345-1,348 — a breakout pairs rising RSI (~60) with rupee-weakness export tailwind and pharma sector at fresh record highs.",
+      "technical": {
+        "pattern": "Symmetrical Triangle Breakout (Long-Term Descending Trendline Test)",
+        "rsi": 59,
+        "trend": "Bullish reversal — RSI bouncing off oversold, price reclaiming EMA-50",
+        "volume_signal": "Volume rising into the apex — 1.5x 20-day average on recent advance",
+        "support": 1280.00,
+        "resistance": 1348.00,
+        "points": [
+          "Eight-month consolidation forming a high-conviction symmetrical triangle",
+          "RSI ~59 and rising — momentum supports an upside resolution",
+          "Trading above EMA-50; descending trendline since 2023 being tested"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "Nifty Pharma at fresh record high on rupee weakness boosting export realisations; YES Securities Buy call (May 21) Target ₹1,440, Stop ₹1,300",
+        "points": [
+          "Weakening rupee (~₹85.5/USD) directly accretive to US generics revenue",
+          "Defensive flows rotating into pharma amid broader market volatility",
+          "Q4 FY26 results May 12 set up improving earnings trajectory"
+        ]
+      },
+      "risk": "Stock has tested ₹1,345-1,348 descending trendline multiple times since 2023 and failed — a rejection here drags it back to ₹1,280 support. Close below ₹1,280 invalidates the reversal thesis."
+    },
+    {
+      "ticker": "LT",
+      "name": "Larsen & Toubro Ltd",
+      "exchange": "NSE",
+      "sector": "Capital Goods / Engineering",
+      "cmp": 3950.00,
+      "target": 4080.00,
+      "upside": 3.3,
+      "timeframe": "2 weeks",
+      "thesis": "Falling-wedge recovery with daily MACD turning bullish from below zero — 9 buy / 0 sell signals on technical screens as price approaches the ₹4,080 swing-high resistance amid a Budget capex tailwind.",
+      "technical": {
+        "pattern": "Falling Wedge Breakout with MACD Bullish Crossover",
+        "rsi": 54,
+        "trend": "Mild bullish — short-term BUY signal, momentum picking up from neutral zone",
+        "volume_signal": "Volume picking up on green candles — 1.6x average on recent advance days",
+        "support": 3850.00,
+        "resistance": 4080.00,
+        "points": [
+          "Daily MACD turning up from below zero — early-stage trend reversal",
+          "9 buy / 0 sell signals on technical screens — Strong Buy daily summary",
+          "Price reclaiming short-term moving averages after 11% correction from ₹4,440"
+        ]
+      },
+      "fundamental": {
+        "catalyst": "Budget 2026 ₹11.21 lakh crore infra capex; LKP Research Buy target ₹4,620; analyst consensus 12-month target ₹4,495 implies 14% medium-term upside",
+        "points": [
+          "Q4 FY26 revenue +11% YoY to ₹82,762 cr — strong order book intact",
+          "Final dividend of ₹38/share record date May 22 supports near-term flows",
+          "Beneficiary of defence, infra, and private capex super-cycle in FY27"
+        ]
+      },
+      "risk": "Stock recently broke the floor of its rising trend channel — a failure to clear ₹4,080 reverts the bias to range-bound. Close below ₹3,850 (recent swing low) signals failed recovery — exit."
+    }
+  ]
+}
